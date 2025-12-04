@@ -1,4 +1,5 @@
 import { Poppins } from "next/font/google";
+import type { ReactNode } from "react";
 import "./globals.css";
 
 const poppins = Poppins({
@@ -11,7 +12,7 @@ export const metadata = {
   description: "Reserva tu mesa en Órdago Getafe",
 };
 
-export default function RootLayout({ children }) {
+export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="es" className={poppins.className}>
       <body>{children}</body>
